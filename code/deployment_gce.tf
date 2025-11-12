@@ -44,6 +44,8 @@ resource "google_compute_instance" "web_host" {
   machine_type = "e2-micro"
   zone         = "${var.region}-a"
 
+ tags = ["my-secure-tag"]
+
   boot_disk {
     initialize_params {
       image = var.gcp_image
